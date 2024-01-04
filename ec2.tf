@@ -1,13 +1,12 @@
 provider "aws" {
-  region     = "us-west-2"
+  region = "ap-south-1"
 }
 
-resource "aws_instance" "myec2" {
-   ami = "ami-082b5a644766e0e6f"
-   instance_type = "t2.micro"
+resource "aws_instance" "example" {
+  ami           = "ami-0a0f1259dd1c90938"
+  instance_type = "t2.micro"
 
-tags = {
-    Name = "HelloWorld"
+  tags = {
+    Name = "Demo"
   }
-   
 }
